@@ -313,6 +313,9 @@ namespace Reddit.Things
         [JsonProperty("url")]
         public string URL { get; set; }
 
+        [JsonProperty("url_overridden_by_dest")]
+        public string URLOverriddenByDest { get; set; }
+
         [JsonProperty("subreddit_subscribers")]
         public int SubredditSubscribers { get; set; }
 
@@ -325,6 +328,15 @@ namespace Reddit.Things
 
         [JsonProperty("is_video")]
         public bool IsVideo { get; set; }
+
+        [JsonProperty("is_gallery")]
+        public bool? IsGallery { get; set; }
+
+        [JsonProperty("gallery_data")]
+        public GalleryData GalleryData { get; set; }
+
+        [JsonProperty("media_metadata")]
+        public Dictionary<string, MediaMetadataItem> MediaMetadata { get; set; }
 
         [JsonProperty("sr_detail")]
         public Subreddit SrDetail { get; set; }

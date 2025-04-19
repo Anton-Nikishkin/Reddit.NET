@@ -20,7 +20,8 @@ namespace Reddit.Models
         /// <returns>The identity of the user.</returns>
         public User Me()
         {
-            return JsonConvert.DeserializeObject<User>(ExecuteRequest("api/v1/me.json"));
+            var response = ExecuteRequest("api/v1/me.json");
+            return JsonConvert.DeserializeObject<User>(response);
         }
 
         /// <summary>
